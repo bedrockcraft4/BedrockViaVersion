@@ -10,7 +10,7 @@ use pocketmine\player\Player;
 class Main extends PluginBase implements Listener {
 
     public function onEnable(): void {
-        $this->getLogger()->info(\"BedrockViaVersion plugin enabled!\");
+        $this->getLogger()->info("BedrockViaVersion plugin enabled!");
         $this->getServer()->getPluginManager()->registerEvents($this, $this);
     }
 
@@ -18,11 +18,11 @@ class Main extends PluginBase implements Listener {
         $playerInfo = $event->getPlayerInfo();
         $protocol = $playerInfo->getProtocolVersion();
 
-        $this->getLogger()->info(\"{$playerInfo->getUsername()} joined with protocol: {$protocol}\");
+        $this->getLogger()->info("{$playerInfo->getUsername()} joined with protocol: {$protocol}");
 
         // Accept only 1.21.50–1.21.80 (example: 639–641)
         if ($protocol < 639 || $protocol > 641) {
-            $event->setKickReason(PlayerPreLoginEvent::KICK_REASON_SERVER_ERROR, \"Only versions 1.21.50 to 1.21.80 are supported.\");
+            $event->setKickReason(PlayerPreLoginEvent::KICK_REASON_SERVER_ERROR, "Only versions 1.21.50 to 1.21.80 are supported.");
         }
     }
 }
