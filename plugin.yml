@@ -1,5 +1,5 @@
 name: BedrockViaVersion
-main: BedrockViaVersion\\Main
+main: BedrockViaVersion\Main
 version: 1.0.0
 api: 5.0.0
 author: bedrockcraft123
